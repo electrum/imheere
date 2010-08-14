@@ -10,6 +10,20 @@ if (isset($_GET["latlng"])) {
 }
 else if (isset($_GET["q"])) {
     $searchtext = $_GET["q"];
+    $geo = geocode($searchtext);
+    if ($geo === false) {
+        $geoerror = "Error geocoding location. Please try again.";
+    }
+    else if (count($geo) == 0) {
+        $geoerror = "We could not understand the location.";
+    }
+    else if (count($geo) > 1) {
+        $geoerror = "Location returned multiple results. Please be more specific.";
+    }
+    else {
+        list($lat, $lng) = $geo[0];
+        $spots = spots($lat, $lng);
+    }
 }
 ?>
 <!DOCTYPE html>
@@ -54,6 +68,9 @@ geo();
 <div class="header-right"><a href="<?=$self?>">Refresh</a></div>
 <div class="main-middle-search">
   <div class="search_form">
+    <? if (isset($geoerror)): ?>
+    <div class="geocode_error"><?=$geoerror?></div>
+    <? endif; ?>
     <form id="search_form" action="<?=$self?>" method="get">
       <input
         id="search"

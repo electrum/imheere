@@ -56,9 +56,25 @@ function distance($lat, $lng, $lat2, $lng2)
     return $radius * $c;
 }
 
-// header("content-type: text/html;charset=utf-8");
-// $x = spots(37.4261796, -122.0715226);
-// echo "<pre>";
-// print_r($x);
+function geocode($address)
+{
+    $url = "http://maps.google.com/maps/api/geocode/json?";
+    $url .= http_build_query(array(
+        "sensor" => "false",
+        "address" => $address,
+    ));
+    $r = @file_get_contents($url);
+    if ($r === false)
+        return false;
+    $r = json_decode($r, true);
+    if ($r === false)
+        return false;
+    $x = array();
+    foreach ($r["results"] as $i) {
+        $i = $i["geometry"]["location"];
+        $x[] = array($i["lat"], $i["lng"]);
+    }
+    return $x;
+}
 
 ?>
