@@ -1,3 +1,4 @@
+<? require_once("facebook.php"); ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:fb="http://www.facebook.com/2008/fbml">
@@ -19,13 +20,16 @@
     <p>Sign Up to find people at your location that meet your interests.</p>
     </div>
     <br />
-    <p><fb:login-button autologoutlink="true" width="300"></fb:login-button></p>
+    <p><fb:login-button autologoutlink="true"></fb:login-button></p>
 
     <div id="fb-root"></div>
     <script>
       window.fbAsyncInit = function() {
         FB.init({appId: '139295836108133', status: true, cookie: true,
                  xfbml: true});
+        FB.Event.subscribe('auth.sessionChange', function(response) {
+          window.location.reload();
+        });
       };
       (function() {
         var e = document.createElement('script');
