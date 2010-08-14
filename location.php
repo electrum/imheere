@@ -77,7 +77,6 @@ geo();
   </div>
   <br />
   <? foreach ($spots as $id => $i): ?>
-  <? $dist = round(distance($lat, $lng, $i["lat"], $i["lng"])); ?>
   <div>
     <a href="#<?=$id?>">
     <div class="location_left_side">
@@ -85,7 +84,7 @@ geo();
     </div>  
     <div class="location_right_side">  
       <div class="location_title_side"><?=htmlspecialchars($i["name"])?></div>
-      <div class="location_distance_side"><?=$dist?> meters</div>
+      <div class="location_distance_side"><?=round($i["distance"])?> meters</div>
     </div>
     </a>
   </div>

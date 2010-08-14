@@ -35,8 +35,11 @@ function spots($lat, $lng)
         if (substr($url, 0, strlen($start)) != $start)
             die("unknown spot url format: " . $url);
         $id = substr($url, strlen($start));
+        $i["id"] = $id;
+        $i["distance"] = distance($lat, $lng, $i["lat"], $i["lng"]);
         $r[$id] = $i;
     }
+    uasort($r, create_function('$a,$b', 'return $a["distance"] - $b["distance"];'));
     return $r;
 }
 
