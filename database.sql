@@ -3,9 +3,9 @@ create table user_at_location (
   , location_id bigint not null
   , status nvarchar(150) not null
   , create_dt timestamp not null default now()
-) primary key(user_id, location_id)
+  , primary key(user_id, location_id)
+  , key(user_id)
+  , key(location_id)
+)
 ;
 
-alter table user_at_location add key (user_id);
-alter table user_at_location add key (location_id);
- 
