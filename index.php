@@ -9,8 +9,8 @@
   <link rel="stylesheet" type="text/css" href="master.css" />
 </head>
 <body>
-  <div>
-    <div class="main-top">
+<div>
+  <div class="main-top">
     <div>Who is here?????</div>
   </div>
   <div class="main-middle">
