@@ -37,7 +37,7 @@ if (isset($_POST["imgdata"])) {
   <body onload="setTimeout(function () {window.scrollTo(0,1);}, 0);" style="background: gray">
 <div>
   <div class="main-top">
-    <div>SweetGeo</div>
+    <div id="comp_name"><a href="location.php" title="sweetgeo"><img src="logo.png"></a></div>
   </div>
   <div class="header-left"><a href="location.php">Back</a></div>
   <div class="header-right"><a href="#" onclick="render_timer(); return false;">Post</a></div>
