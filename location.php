@@ -66,7 +66,7 @@ geo();
     <body onload="setTimeout(function () {window.scrollTo(0,1);}, 0);">
     <div class="main-top">
       <div>
-        <span id="comp_name">SweetGeo</span>
+        <div id="comp_name"><a href="location.php" title="sweetgeo"><img src="logo.png"></a></div>
       </div>
       <div class="header-right"><a href="<?=$self?>">Refresh</a></div>
     </div>
@@ -92,7 +92,8 @@ geo();
        <p>Places Near You</p>
      </div>
       <div id='loc_container'>
-      <? foreach ($spots as $id => $i): ?>
+      <? $n=0; foreach ($spots as $id => $i): $n++;?>
+      <li class="<?=(($n % 2) == 0) ? "arow" : "brow"?>">
         <div class="loc">
           <a href="status.php?location=<?=$id?>">
           <div class="location_left_side">
@@ -104,6 +105,7 @@ geo();
           </div>
           </a>
         </div>
+      </li>
       <? endforeach; ?>
       <? endif; ?>
       </div>
