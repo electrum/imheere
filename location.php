@@ -35,7 +35,6 @@ else if (isset($_GET["q"])) {
   <title>Who is here?????</title>
   <link rel="stylesheet" type="text/css" href="master.css" />
   <script type="text/javascript">
-// function $(id) { return document.getElementById(id); }
 function geo() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function(pos) {
@@ -95,7 +94,7 @@ geo();
   <br />
   <? foreach ($spots as $id => $i): ?>
   <div>
-    <a href="#<?=$id?>">
+    <a href="status.php?location=<?=$id?>">
     <div class="location_left_side">
       <img src="<?=$i["image_url"]?>" />
     </div>  
