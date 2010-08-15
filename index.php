@@ -14,7 +14,7 @@ if (get_facebook_cookie()) {
   <title>SweetGeo</title>
   <link rel="stylesheet" type="text/css" href="master.css" />
   </head>
-  <body onload="setTimeout(function () {window.scrollTo(0,1);}, 1);">
+  <body>
   <div class="main-top">
     <div id="cmpname">
        <span id="comp_name">SweetGeo</span>
@@ -26,10 +26,9 @@ if (get_facebook_cookie()) {
      <p>Ever wondered if the person next to you has the same interests as you?</p>
      <p>Sign Up to find people at your location that meet your interests.</p>
     </div>
-    <div class="sign-up-fb">
-      <fb:login-button show-faces="true" width="250"></fb:login-button>
-      <?=facebook_div()?>
-    </div>
+    <br />
+    <fb:login-button></fb:login-button>
   </div>
+  <?=facebook_div()?>
   </body>
 </html>
