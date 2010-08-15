@@ -11,6 +11,7 @@ a img, :link img, :visited img {border: none}
 body {
     font: 100% 'arial', sans-serif; 
     background-color: #fff;
+    min-height: 416px;
 }
 a {text-decoration: none;}
 input {color: #858585}
