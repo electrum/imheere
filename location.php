@@ -73,35 +73,33 @@ geo();
     <div class="search_form">
       <? if (isset($geoerror)): ?>
         <div class="geocode_error"><?=$geoerror?></div>
-      <? endif; ?>
-      <form id="search_form" action="<?=$self?>" method="get">
-        <input
-          id="search"
-          class="search_form_field"
-          onblur="this.value=!this.value?'<?=$searchhelp?>':this.value;"
-          onfocus="if(this.value=='<?=$searchhelp?>')this.value='';"
-          name="q"
-          value="<?=htmlspecialchars($searchtext)?>"
-          type="text"/>
-        <input class="search_form_submit" value="Find" type="submit"/>
-      </form>
-    </div>
-    <? if (isset($spots)): ?>
+        <? endif; ?>
+        <form id="search_form" action="<?=$self?>" method="get">
+          <input
+            id="search"
+            class="search_form_field"
+            onblur="this.value=!this.value?'<?=$searchhelp?>':this.value;"
+            onfocus="if(this.value=='<?=$searchhelp?>')this.value='';"
+            name="q"
+            value="<?=htmlspecialchars($searchtext)?>"
+            type="text"/>
+          <input class="search_form_submit" value="Find" type="submit"/>
+        </form>
+      </div>
+      <? if (isset($spots)): ?>
       <div class="title-line">
         <p>Locations Near You</p>
       </div>
       <div id='loc_container'>
-        <? foreach ($spots as $id => $i): ?>
-          <div class="loc">
-            <a href="status.php?location=<?=$id?>">
-              <div class="location_left_side">
-                <img src="<?=$i["image_url"]?>" />
-              </div>  
-              <div class="location_right_side">  
-                <div class="location_title_side"><?=htmlspecialchars($i["name"])?></div>
-                <div class="location_distance_side"><?=round($i["distance"])?> meters</div>
-              </div>
-            </a>
+      <? foreach ($spots as $id => $i): ?>
+        <div class="loc">
+          <a href="status.php?location=<?=$id?>">
+          <div class="location_left_side">
+            <img src="<?=$i["image_url"]?>" />
+          </div> 
+          <div class="location_right_side"> 
+            <div class="location_title_side"><?=htmlspecialchars($i["name"])?></div>
+            <div class="location_distance_side"><?=round($i["distance"])?> meters</div>
           </div>
         <? endforeach; ?>
       </div>
