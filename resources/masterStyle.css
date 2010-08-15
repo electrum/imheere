@@ -7,6 +7,10 @@ ul, ol {list-style: none}
 h1, h2, h3, h4, h5, h6, pre, code {font-size: 1em}
 ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, body, html, p, blockquote, fieldset, input {margin: 0; padding: 0}
 a img, :link img, :visited img {border: none}
+
+/*other*/
+.hide{display:none;}
+
 /* Main Styles */
 body {
     font: 100% 'arial', sans-serif; 
@@ -162,6 +166,7 @@ input.search_form_submit {
     -moz-border-radius: 8px; 
     -webkit-border-radius: 8px; 
     border-radius: 8px;
+margin:0 0 0 5px;
 }
 
 .title-line {
@@ -223,7 +228,7 @@ background:#ededed;
 }
 .mapbox_right_side {
  float:left;
- width:230px;
+
 }
 .mapbox_usertitle_side {
  display:block;
@@ -303,19 +308,18 @@ background-image:url(/images/design/social_media/icon_brightkite.png);
 background-repeat:no-repeat;
 }
 
-
-
-
-
 /** map bubbles**/
  .mapbox {
  display:block;
- width:320px;
+    width: 100%;
+margin:4px 0 2px 4px;
  overflow:hidden !important;
 }
+.mapbox_userpic{
+}
 .mapbox_userpic img {
- width:50px;
- height:50px;
+ width:60px;
+ height:60px;
 }
 .mapbox_left {
  float:left;
@@ -338,9 +342,11 @@ background-repeat:no-repeat;
  text-decoration:none;
 }
 .mapbox_right {
+padding:0 0 0 5px;
  float:left;
  display:block;
-    width: 248px;
+width:70%;
+
 }
 .mapbox_usertitle {
  display:block;
@@ -640,14 +646,7 @@ background:#ededed;
         text-align:left;
 
 }
-.mapbox_usertitle_side {
- display:block;
- font-weight:bold;
- font-size:14px;
- text-decoration:none;
- color:#2f44e5;
-float:left;
-}
+
 
 .mapbox_usertext_side {
  display:block;
@@ -659,11 +658,13 @@ clear:both;
  color:#8c8c8c;
  font-size:12px;
  font-weight:bold;
+margin:2px 0 4px  0;
 }
 .brow .mapbox_datecont_side {
  color:#4f4f4f;
  font-size:12px;
  font-weight:bold;
+margin:2px 0 4px  0;
 }
 #people_list a{
 
@@ -695,25 +696,26 @@ padding:3px 0;
 
 
 /* Gowalla Locations */
-#location {
-height: 3.2em;
-padding: 4px 0;
+.loc {
+height:54px;
 border-bottom: 1px solid gray;
 }
-
+.loc img{
+width:32px;
+height:32px;
+margin:10px auto;
+}
 .location_left_side {
  float:left;
- width:60px;
+ width:50px; 
+height:50px;
 }
-.location_left_side img {
- width:48px;
- height:48px;
-}
+
 .location_right_side {
  float:left;
  width:230px;
         text-align:left;
-
+margin:10px 0 0 0;
 }
 .location_title_side {
  display:block;
@@ -737,7 +739,7 @@ border-bottom: 1px solid gray;
 
 #checkin_header {
 Margin: 4px 0 4px 6px;
-color: #fff;
+color: #00;
 }
 
 input.social_sharing {
@@ -750,11 +752,11 @@ textarea {
  width: 280px;
  height: 100px;
  padding: 5px;
- color: #666;
+ color: #4e4e4e;
  margin: 10px 0 10px 20px;
         -webkit-border-radius: 8px;
  -moz-border-radius: 8px;
- border: 0;
+ border: 1px solid grey;
 }
 
 textarea.message {
@@ -772,7 +774,7 @@ textarea.message {
 #checkin_button {
  display: block;
  background-color: green;
- width: 80%;
+ width: 60%;
  height: 45px;
  line-height: 45px;
  margin: 0 0 14px 28px;
@@ -800,3 +802,19 @@ textarea.message {
  -moz-border-radius: 8px;
  border: 0;
 }
+.postto{
+margin:2px 0 2px 10px;
+}
+.social_n{
+float:left;
+margin:0 2px;
+height:25px;
+width:25px;
+}
+.social_n_imgcont{
+float:right;
+}
+
+
+
+
