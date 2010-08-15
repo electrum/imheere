@@ -7,6 +7,8 @@ if (get_facebook_cookie()) {
 }
 ?>
 <?=html_header()?>
+  </head>
+  <body>
   <div class="main-top">
     <div id="cmpname">
         <img alt="Company Name" src="">
@@ -23,4 +25,5 @@ if (get_facebook_cookie()) {
       <?=facebook_div()?>
     </div>
   </div>
-<?=html_footer()?>
+  </body>
+</html>
