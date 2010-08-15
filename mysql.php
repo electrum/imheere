@@ -13,12 +13,12 @@ catch(PDOException $e) {
   die("failed connecting to database: " . $e->getMessage());
 }
 
-function insert_user_location($user_id, $user_name, $location_id, $status)
+function insert_user_location($user_id, $user_name, $location_id, $status, $imgdata = "")
 {
   global $dbh;
   try {
-    $stmt = $dbh->prepare('INSERT INTO user_location(user_id, user_name, location_id, status) VALUES (?, ?, ?, ?)');
-    $res = $stmt->execute(array($user_id, $user_name, $location_id, $status));
+    $stmt = $dbh->prepare('INSERT INTO user_location(user_id, user_name, location_id, status, image) VALUES (?, ?, ?, ?, ?)');
+    $res = $stmt->execute(array($user_id, $user_name, $location_id, $status, $imgdata));
   }
   catch(PDOException $e) {
     die("database insert failed: " . $e->getMessage());
@@ -31,7 +31,7 @@ function select_users_at_location($location_id)
   try {
     $stmt = $dbh->prepare('
         SELECT
-          user_id, user_name, location_id, status,
+          user_id, user_name, location_id, status, image,
           TIMESTAMPDIFF(SECOND, create_dt, NOW()) delta
         FROM user_location
         WHERE location_id = ?
