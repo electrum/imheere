@@ -17,7 +17,7 @@ if (get_facebook_cookie()) {
   <body onload="setTimeout(function () {window.scrollTo(0,1);}, 1);">
   <div class="main-top">
     <div id="cmpname">
-       <span id="comp_name">SweetGeo</span>
+       <div id="comp_name"><img src="logo.png"></div>
     </div>
   </div>
   <div class="main-middle">
