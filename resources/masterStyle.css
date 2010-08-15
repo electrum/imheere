@@ -1,417 +1,3 @@
-* Basical Styles */
-ul, ol, li {list-style: none; margin: 0px; padding: 0px}
-h1, h2, h3, h4, h5, h6, pre, code {font-size: 1em}
-ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, body, html, p, blockquote, fieldset, input {margin: 0; padding: 0}
-a img, :link img, :visited img {border: none}
-ul, ol {list-style: none}
-h1, h2, h3, h4, h5, h6, pre, code {font-size: 1em}
-ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, body, html, p, blockquote, fieldset, input {margin: 0; padding: 0}
-a img, :link img, :visited img {border: none}
-
-/*other*/
-.hide{display:none;}
-
-/* Main Styles */
-body {
-    font: 100% 'arial', sans-serif; 
-    background-color: #404040;
-}
-a {text-decoration: none;}
-input {color: #858585}
-/* Header & Logo Styles */
-.main-top {
-    min-height: 30px; 
-    margin: 0px; 
-    padding: 10px 0px;
-    background-color: #000; 
-    color: #fff;
-    text-align:right;
-}
-.main-top div {
-    text-align:center; 
-    font-weight: bold;
-}
-.main-top div img {
-    position: relative;
-    z-index: 1;
-}
-.header-left {
-    position:absolute; 
-    top: 1em; 
-    left: 0.3em; 
-    text-align: left; 
-    clear: both; 
-    color: #778899; 
-    font-size: .9em;
-    z-index: 3;
-}
-.header-right {
-    position:absolute; 
-    top: 1em; 
-    right: 0.3em; 
-    text-align: right; 
-    clear: both; 
-    color: #778899; 
-    font-size: .9em;
-    z-index: 2;
-}
-.header-left a, 
-.header-right a {
-    background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ddd));
-    background: -moz-linear-gradient(top, #fff, #ddd);
-    color: #000;
-    font-size: 1em;
-    padding: 0.4em .5em;
-    border: 2px solid #c6c6c6;
-    -moz-border-radius: 8px; 
-    -webkit-border-radius: 8px; 
-    border-radius: 8px;
-}
-.header-left a:hover, 
-.header-right a:hover {
-    background-color: #828282;
-}
-
-.sign-up-btn {
-    margin-top: 1.2em;
-}
-.sign-up-btn a {
-    background-color: blue;
-    color: #fff;
-    font-size: 1em;
-    padding: 0.4em 1.7em;
-    border: 2px solid #c6c6c6;
-    -moz-border-radius: 8px; 
-    -webkit-border-radius: 8px; 
-    border-radius: 8px;
-}
-
-.sign-up-btn1 a {
-    background-color: lightblue;
-    color: #fff;
-    font-size: 1em;
-    padding: 0.4em 1.7em;
-    border: 2px solid #c6c6c6;
-    -moz-border-radius: 8px; 
-    -webkit-border-radius: 8px; 
-    border-radius: 8px;
-}
-
-/* Content Styles */
-.main-middle {
-    color: #505050; 
-    padding: 0.2em 1em 1.5em 1em; 
-    margin: 0px 0px; 
-    font-weight: bold; 
-    text-align: center;
-    background-color: #fff;
-}
-.main-middle h1 {
-    font-size: 1.2em;
-    padding-top: 0.4em;
-    padding-bottom: 0.4em;
-}
-.content {
-    width: 100%;
-    text-align: center;
-}
-.main-middle p {
-    font-size: 0.9em;
-    font-weight: normal;
-}
-
-/* Search page */
-.main-middle-search {
-    color: #505050; 
-    padding: 0em 0em 1.5em 0em; 
-    margin: 0px 0px; 
-    font-weight: bold; 
-    text-align: center;
-    background-color: #fff;
-   
-}
-
-.search_form {
-    clear: both;
-    font-size: 0.9em;
-    width: 100%;
-    text-align: left;
-    padding: 0.2em 0;
-}
-.search_form p {
-    width: 100%;
-    text-align: center;
-    padding-top: 0.5em;
-    padding-bottom: 1em;
-}
-.search_form input.search_form_field {
-    margin-left: 10px;
-    padding: 3px; 
-    font: 1em 'Lucida Grande', sans-serif; 
-    width: 180px;
-    height: 27px;
-    border: 1px solid #cccccc;
-}
-.search_form ul {
-    width: 100%;
-}
-.search_form ul li {
-}
-input.search_form_submit {
-    background-color: blue;
-    color: #fff;
-    font-size: 1em;
-    padding: 0.1em .4em;
-    border: 2px solid #c6c6c6;
-    -moz-border-radius: 8px; 
-    -webkit-border-radius: 8px; 
-    border-radius: 8px;
-margin:0 0 0 5px;
-}
-
-.title-line {
-    width: 100%;
-    padding: 4px 0;
-    text-align: left;
-    color: #fff;
-    background-color: lightblue;
-   
-}
-
-.title-line p {
-    padding-left: 10px;
-    font-weight: bold;
-    font-family: Tahoma, sans-serif;
-}
-
-/* Big Text Box */
-.main-middle-textBox {
-    color: #505050; 
-    padding: 0.2em 1em 0.5em 1em; 
-    margin: 0px 0px; 
-    font-weight: bold; 
-    text-align: left;
-    background-color: gray;
-    height: 100%;
-    
-}
-.main-middle-textBox textarea {
-    width: 95%;
-    padding: 5px;
-    font-family: Arial, sans-serif;
-    border: 1px solid #fff;
-    -moz-border-radius: 5px; 
-    -webkit-border-radius: 5px; 
-    border-radius: 5px;
-    color: #858585;
-}
-
-
-/* Alternating Colors Behind People */
-.arow{
-background:#f7f7f7;
-}
-.brow{
-background:#ededed;
-}
-/* End Alternating Colors Behind People */
-
-/** start user picture and comment **/
-
-.mapbox_left_side {
- float:left;
- width:60px;
-}
-.mapbox_left_side img {
- width:48px;
- height:48px;
-}
-.mapbox_right_side {
- float:left;
-
-}
-.mapbox_usertitle_side {
- display:block;
- font-weight:bold;
- font-size:14px;
- text-decoration:none;
- color:#2f44e5;
-float:left;
-}
-/** end user picture and comment **/
-
-/** social network icons **/
-.social_network_twitter, .social_network_gowalla, .social_network_foursquare, .social_network_brightkite
-{
-width:20px;
-height:20px;
-float:right;
-margin: 0 5px 0 0;
-}
-.social_network_twitter
-{
-background-image:url(/images/design/social_media/icon_twitter.png);
-background-repeat:no-repeat;
-}
-.social_network_twitter a:link, .social_network_twitter a:visited, .social_network_twitter a:hover, .social_network_twitter a:active, .social_network_gowalla a:link, .social_network_gowalla a:visited, .social_network_gowalla a:hover, .social_network_gowalla a:active, .social_network_foursquare a:link, .social_network_foursquare a:visited, .social_network_foursquare a:hover, .social_network_foursquare a:active, .social_network_brightkite a:link, .social_network_brightkite a:visited, .social_network_brightkite a:hover, .social_network_brightkite a:active, .social_network_twitter a:link, .social_network_twitter a:visited, .social_network_twitter a:hover, .social_network_twitter a:active, .social_network_gowalla a:link, .social_network_gowalla a:visited, .social_network_gowalla a:hover, .social_network_gowalla a:active, .social_network_foursquare a:link, .social_network_foursquare a:visited, .social_network_foursquare a:hover, .social_network_foursquare a:active, .social_network_brightkite a:link, .social_network_brightkite a:visited, .social_network_brightkite a:hover, .social_network_brightkite a:active
-{
- width:20px;
-        height:20px;
-        float:right; 
-}
-
-.social_network_gowalla
-{
-background-image:url(/images/design/social_media/icon_gowalla.png);
-background-repeat:no-repeat;
-}
-
-.social_network_foursquare
-{
-background-image:url(/images/design/social_media/icon_foursquare.png);
-background-repeat:no-repeat;
-}
-
-.social_network_brightkite
-{
-background-image:url(/images/design/social_media/icon_brightkite.png);
-background-repeat:no-repeat;
-}
-
-.social_network_twitter, .servicemasked_gowalla, .social_network_foursquare, .social_network_brightkite
-{
-width:20px;
-height:20px;
-float:right;
-margin: 0 5px 0 0;
-}
-.social_network_twitter
-{
-background-image:url(/images/design/social_media/icon_twitter.png);
-background-repeat:no-repeat;
-}
-
-.social_network_gowalla
-{
-background-image:url(/images/design/social_media/icon_gowalla.png);
-background-repeat:no-repeat;
-}
-.social_network_foursquare
-{
-background-image:url(/images/design/social_media/icon_foursquare.png);
-background-repeat:no-repeat;
-}
-
-.social_network_brightkite
-{
-background-image:url(/images/design/social_media/icon_brightkite.png);
-background-repeat:no-repeat;
-}
-
-/** map bubbles**/
- .mapbox {
- display:block;
-    width: 100%;
-margin:4px 0 2px 4px;
- overflow:hidden !important;
-}
-.mapbox_userpic{
-}
-.mapbox_userpic img {
- width:60px;
- height:60px;
-}
-.mapbox_left {
- float:left;
- width:60px;
-}
-.mapbox_left img {
- border:none;
-}
-.mapbox_userfollow {
- background:#33ccff;
- width:50px;
- text-align:center;
- color:#fff;
- font-weight:bold;
- font-size:10px;
-}
-.mapbox_userfollow a {
- color:#fff;
- font-size:12px;
- text-decoration:none;
-}
-.mapbox_right {
-padding:0 0 0 5px;
- float:left;
- display:block;
-width:70%;
-
-}
-.mapbox_usertitle {
- display:block;
-}
-.mapbox_usertitle a {
- font-weight:bold;
- font-size:14px;
- text-decoration:none;
- color:#2f44e5;
- display:block;
-
-}
-.mapbox_usertext {
- float:left;
- width:250px;
- font-size:13px;
- clear:both;
-}
-.mapbox_usertext a {
- color#0500e1;
-}
-.mapbox_usertext p {
- font-size:12px !important;
-}
-.mapdate {
- width:104px;
- margin:0 70px 0 0;
- float:left;
- display:block;
-}
-.mapbox_reply {
- display:block;
- background:url(/images/design/map/reply_button.png);
- background-repeat:no-repeat;
- border: 0;
- cursor: pointer; /* hand-shaped cursor */
- cursor: hand; /* for IE 5.x */
- width:52px;
- height:18px;
- float:left;
- text-align:center;
- margin:0 0 0 20px;
- padding:1px 0 0 0;
-}
-.mapbox_reply a {
- color:#fff;
- text-decoration:none;
- width:52px;
- height:18px;
- display:block;
- font-size:12px;
-}
-.mapbox_usertext a {
- font-size:
-}
-.mapbox_datecont {
- display:block;
- float:left;
- padding:10px 0 0 0;
- color:#8c8c8c;
- font-size:12px;
- font-weight:bold;
-}
-/**end map bubbles**/
-
 /* Basical Styles */
 ul, ol, li {list-style: none; margin: 0px; padding: 0px}
 h1, h2, h3, h4, h5, h6, pre, code {font-size: 1em}
@@ -445,6 +31,34 @@ input {color: #858585}
     position: relative;
     z-index: 1;
 }
+
+
+/** add on **/
+
+
+.main-top div {
+    text-align:center; 
+    font-weight: bold;
+}
+.main-top div img {
+    position: relative;
+    z-index: 1;
+}
+.header-left {
+    position:absolute; 
+    top: 1em; 
+    left: 0.3em; 
+    text-align: left; 
+    clear: both; 
+    color: #778899; 
+    font-size: .9em;
+    z-index: 3;
+}
+/** add on end **/
+
+
+
+
 .header-left {
     position:absolute; 
     top: 1em; 
@@ -715,7 +329,7 @@ height:50px;
  float:left;
  width:230px;
         text-align:left;
-margin:10px 0 0 0;
+margin:2px 0 0 0;
 }
 .location_title_side {
  display:block;
@@ -724,6 +338,7 @@ margin:10px 0 0 0;
  text-decoration:none;
  color:#2f44e5;
         float:left;
+width:280px;
 }
 
 .location_distance_side {
@@ -814,7 +429,3 @@ width:25px;
 .social_n_imgcont{
 float:right;
 }
-
-
-
-
