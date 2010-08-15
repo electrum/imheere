@@ -29,14 +29,7 @@ else if (isset($_GET["q"])) {
     }
 }
 ?>
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:fb="http://www.facebook.com/2008/fbml">
-<head>
-  <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <title>SweetGeo</title>
-  <link rel="stylesheet" type="text/css" href="master.css" />
+<?=html_header()?>
   <script type="text/javascript">
 function geo() {
     if (navigator.geolocation) {
@@ -62,58 +55,56 @@ function geo() {
 geo();
 <? endif; ?>
   </script>
-</head>
-<body>
-<div class="main-top">
-  <div>SweetGeo</div>
-</div>
-<?=facebook_div()?>
-<div class="fblogout-left"><fb:login-button autologoutlink="true"></fb:login-button></div>
-<div class="header-right"><a href="<?=$self?>">Refresh</a></div>
-<div class="main-middle-search">
-  <div class="search_form">
-    <? if (isset($geoerror)): ?>
-    <div class="geocode_error"><?=$geoerror?></div>
-    <? endif; ?>
-    <form id="search_form" action="<?=$self?>" method="get">
-      <input
-        id="search"
-        class="search_form_field"
-        onblur="this.value=!this.value?'<?=$searchhelp?>':this.value;"
-        onfocus="if(this.value=='<?=$searchhelp?>')this.value='';"
-        name="q"
-        value="<?=htmlspecialchars($searchtext)?>"
-        type="text"
-      />
-      <input
-        class="search_form_submit"
-        value="Find"
-        type="submit"
-      />
-    </form>
-  </div>
-  <? if (isset($spots)): ?>
-  <div class="title-line">
-    <p>Locations Near You</p>
-  </div>
-  <br />
-  <? foreach ($spots as $id => $i): ?>
-  <div>
-    <a href="status.php?location=<?=$id?>">
-    <div class="location_left_side">
-      <img src="<?=$i["image_url"]?>" />
-    </div>  
-    <div class="location_right_side">  
-      <div class="location_title_side"><?=htmlspecialchars($i["name"])?></div>
-      <div class="location_distance_side"><?=round($i["distance"])?> meters</div>
+  </head>
+  <body>
+    <div class="main-top">
+      <div>
+        <img alt="Company Name" src="">
+      </div>
+      <div class="header-right">
+        <a href="#">Refresh</a>
+      </div>
     </div>
-    </a>
-  </div>
-  <br />&nbsp;
-  <div style="width: 100%;">&nbsp;</div>
-  <div style="width: 100%;">&nbsp;</div>
-  <? endforeach; ?>
-  <? endif; ?>
-</div>
-</body>
+    <div class="sign-up-fb">
+      <?=facebook_div()?>
+      <fb:login-button autologoutlink="true"></fb:login-button>
+    </div>
+    <div class="header-right"><a href="<?=$self?>">Refresh</a></div>
+    <div class="main-middle-search">
+      <div class="search_form">
+        <? if (isset($geoerror)): ?>
+        <div class="geocode_error"><?=$geoerror?></div>
+        <? endif; ?>
+        <form id="search_form" action="<?=$self?>" method="get">
+          <input
+            id="search"
+            class="search_form_field"
+            onblur="this.value=!this.value?'<?=$searchhelp?>':this.value;"
+            onfocus="if(this.value=='<?=$searchhelp?>')this.value='';"
+            name="q"
+            value="<?=htmlspecialchars($searchtext)?>"
+            type="text"/>
+          <input class="search_form_submit" value="Find" type="submit"/>
+        </form>
+      </div>
+      <? if (isset($spots)): ?>
+      <div class="title-line">
+        <p>Locations Near You</p>
+      </div>
+      <? foreach ($spots as $id => $i): ?>
+      <div class="loc">
+        <a href="status.php?location=<?=$id?>">
+        <div class="location_left_side">
+          <img src="<?=$i["image_url"]?>" />
+        </div>  
+        <div class="location_right_side">  
+          <div class="location_title_side"><?=htmlspecialchars($i["name"])?></div>
+          <div class="location_distance_side"><?=round($i["distance"])?> meters</div>
+        </div>
+        </a>
+      </div>
+      <? endforeach; ?>
+      <? endif; ?>
+    </div>
+  </body>
 </html>
