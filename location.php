@@ -68,8 +68,6 @@ geo();
       <div>
         <span id="comp_name">SweetGeo</span>
       </div>
-<?=facebook_div()?>
-<fb:login-button autologoutlink="true"></fb:login-button>
       <div class="header-right"><a href="<?=$self?>">Refresh</a></div>
     </div>
     <div class="main-middle-search">
@@ -86,13 +84,13 @@ geo();
             name="q"
             value="<?=htmlspecialchars($searchtext)?>"
             type="text"/>
-          <input class="search_form_submit" value="Find" type="submit"/>
-       </form>
+        <input class="search_form_submit" value="Find" type="submit"/>
+      </form>
      </div>
       <? if (isset($spots)): ?>
       <div class="title-line">
-        <p>Locations Near You</p>
-      </div>
+       <p>Places Near You</p>
+     </div>
       <div id='loc_container'>
       <? foreach ($spots as $id => $i): ?>
         <div class="loc">
@@ -107,9 +105,12 @@ geo();
           </a>
         </div>
       <? endforeach; ?>
-      </div>
       <? endif; ?>
       </div>
+    </div>
+    <div id="face_log">
+      <?=facebook_div()?>
+      <fb:login-button autologoutlink="true"></fb:login-button>
     </div>
   </body>
 </html>

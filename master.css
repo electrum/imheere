@@ -20,7 +20,7 @@ input {color: #858585}
     min-height: 30px; 
     margin: 0px; 
     padding: 10px 0px;
-    background-color: #000; 
+    background-color: #abc8e1; 
     color: #fff;
     text-align:right;
 }
@@ -82,19 +82,19 @@ input {color: #858585}
 }
 .header-left a, 
 .header-right a {
-    background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ddd));
-    background: -moz-linear-gradient(top, #fff, #ddd);
-    color: #000;
+    background: -webkit-gradient(linear, left top, left bottom, from(#abd25f), to(#728c32));
+    background: -moz-linear-gradient(top, #abd25f, #728c32);
+    color: #fff;
     font-size: 1em;
     padding: 0.4em .5em;
-    border: 2px solid #c6c6c6;
+    border: 2px solid #abd25f;
     -moz-border-radius: 8px; 
     -webkit-border-radius: 8px; 
     border-radius: 8px;
 }
 .header-left a:hover, 
 .header-right a:hover {
-    background-color: #828282;
+    background: #828282;
 }
 
 .sign-up-fb {
@@ -227,9 +227,9 @@ input.search_form_submit {
     
 }
 .main-middle-textBox textarea {
-    width: 95%;
+    width: 97%;
     padding: 5px;
-    margin: 5px;
+    margin: 5px 18px 0 0;
     font-family: Arial, sans-serif;
     border: 1px solid #fff;
     -moz-border-radius: 5px; 
@@ -437,4 +437,48 @@ float:right;
 color:#fff;
 font-size:26px;
 font-family:arial;
+}
+
+/* graffiti page */
+#or {
+text-align:center;
+font-size:30px;
+color: #fff;
+margin: 15px 0 14px 0px;
+font-family: Arial, sans-serif;
+font-weight: bold;
+}
+#auto_button {
+ display: block;
+ background-color: #ABC8E1;
+ width: 95%;
+ height: 45px;
+ line-height: 45px;
+ margin: 15px 0 14px 8px;
+ text-align: center;
+ font-weight: bold;
+ color: white;
+ font-size: 26px;
+ -webkit-border-radius: 8px;
+ -moz-border-radius: 8px;
+ border: 0;
+clear:both;
+font-family: Arial, sans-serif;
+}
+#auto_button a {
+color: #fff;
+}
+#auto_button:hover{
+background: #1C1C52;
+}
+/* end graffiti page*/
+
+#face_log {
+margin: 0 0 20px 10px;
+width: 100%;
+}
+
+#face_log_wall {
+margin: 0 0 5px 5px;
+width: 100%;
 }

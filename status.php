@@ -59,7 +59,7 @@ if (isset($_POST["text"])) {
     <span id="comp_name">SweetGeo</span>
     </div>
   </div>
-  <div class="header-left"><a href="location.php">Back</a></div>
+  <div class="header-left"><a href="location.php">Places</a></div>
   <div class="header-right"><a href="#" onclick="submit(); return false;">Post</a></div>
 </div>
 <div class="main-middle-textBox">
@@ -73,5 +73,7 @@ if (isset($_POST["text"])) {
   </form>
   <p>Please limit to <?=$limit?> characters.</p>
 </div>
+<div id="or">or</div>
+<div id="auto_button"><a href="graffiti.php?location=<?=$location?>">Autograph</a></div>
 </body>
 </html>
