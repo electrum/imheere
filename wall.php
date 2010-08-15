@@ -37,7 +37,7 @@ function time_delta($t)
        <span id="comp_name">SweetGeo</span>
     </div>
   </div>
-  <div class="header-left"><a href="status.php?location=<?=$location?>">Back</a></div>
+  <div class="header-left"><a href="status.php?location=<?=$location?>">Post</a></div>
   <div class="header-right"><a href="wall.php?location=<?=$location?>">Refresh</a></div>
 </div>
 
@@ -66,6 +66,10 @@ function time_delta($t)
     <? endforeach; ?>
   </ul>
 </div>
+<div id="face_log_wall">
+   		<?=facebook_div()?>
+		<fb:login-button autologoutlink="true"></fb:login-button>
+    </div>
 
 </body>
 </html>
