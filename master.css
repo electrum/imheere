@@ -351,7 +351,7 @@ width:280px;
         margin: 1.5em 0 0 0;
  font-size:12px;
         clear:both;
-        color: lightgray;
+        color: gray;
 }
 
 /* CheckIn Status */
@@ -433,10 +433,9 @@ width:25px;
 .social_n_imgcont{
 float:right;
 }
-#comp_name {
-color:#fff;
-font-size:26px;
-font-family:arial;
+#comp_name img{
+width:120px;
+height: 30px;
 }
 
 /* graffiti page */
