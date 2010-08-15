@@ -6,7 +6,7 @@ define('MYSQL_PASS', '');
 define('MYSQL_DB', 'sweetgeo');
 
 try {
-  $dbh = new PDO("mysql:host=" . MYSQL_HOST . ";dbname=" . MYSQL_DB,
+  $dbh = @new PDO("mysql:host=" . MYSQL_HOST . ";dbname=" . MYSQL_DB,
     MYSQL_HOST, MYSQL_PASS);
 }
 catch(PDOException $e) {
