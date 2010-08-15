@@ -1,4 +1,5 @@
 <?
+require_once("resources/html.php");
 require_once("facebook.php");
 require_once("gowalla.php");
 
@@ -91,20 +92,22 @@ geo();
       <div class="title-line">
         <p>Locations Near You</p>
       </div>
+      <div id='loc_container'>
       <? foreach ($spots as $id => $i): ?>
-      <div class="loc">
-        <a href="status.php?location=<?=$id?>">
-        <div class="location_left_side">
-          <img src="<?=$i["image_url"]?>" />
-        </div>  
-        <div class="location_right_side">  
-          <div class="location_title_side"><?=htmlspecialchars($i["name"])?></div>
-          <div class="location_distance_side"><?=round($i["distance"])?> meters</div>
+        <div class="loc">
+          <a href="status.php?location=<?=$id?>">
+          <div class="location_left_side">
+            <img src="<?=$i["image_url"]?>" />
+          </div>  
+          <div class="location_right_side">  
+            <div class="location_title_side"><?=htmlspecialchars($i["name"])?></div>
+            <div class="location_distance_side"><?=round($i["distance"])?> meters</div>
+          </div>
+          </a>
         </div>
-        </a>
-      </div>
       <? endforeach; ?>
       <? endif; ?>
+      </div>
     </div>
   </body>
 </html>
