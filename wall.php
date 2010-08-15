@@ -53,7 +53,11 @@ function time_delta($t)
       </div>
       <div class="mapbox_right_side">
         <div class="mapbox_usertitle_side"><?=htmlspecialchars($i["user_name"])?></div>
-        <div class="mapbox_usertext_side"><?=htmlspecialchars($i["status"])?></div>
+        <? if (strlen($i["image"]) > 0): ?>
+          <img color=#F7F7F7 src="data:image/gif;base64,<?=$i["image"]?>">
+        <? else: ?>
+          <div class="mapbox_usertext_side"><?=htmlspecialchars($i["status"])?></div>
+        <? endif; ?>
         <div class="mapbox_datecont_side"><?=time_delta($i["delta"])?> ago</div>
       </div>
       <span class="imgfixs">&nbsp;</span>
