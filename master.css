@@ -214,18 +214,21 @@ input.search_form_submit {
 
 /* Big Text Box */
 .main-middle-textBox {
-    color: #505050; 
+    color: #ddd; 
     padding: 0.2em 1em 0.5em 1em; 
     margin: 0px 0px; 
     font-weight: bold; 
     text-align: left;
     background-color: gray;
     height: 100%;
+   
+  
     
 }
 .main-middle-textBox textarea {
     width: 95%;
     padding: 5px;
+    margin: 5px;
     font-family: Arial, sans-serif;
     border: 1px solid #fff;
     -moz-border-radius: 5px; 
@@ -255,30 +258,30 @@ background:#ededed;
  height:48px;
 }
 .mapbox_right_side {
- float:left;
- width:230px;
+ width:100%;
         text-align:left;
-
+        
 }
 
 
 .mapbox_usertext_side {
  display:block;
- width:220px;
+ width:100%;
  font-size:12px;
-clear:both;
-}
+ }
 .arow .mapbox_datecont_side {
  color:#8c8c8c;
  font-size:12px;
  font-weight:bold;
-margin:2px 0 4px  0;
+margin:2px 0 4px  60px;
+
 }
 .brow .mapbox_datecont_side {
  color:#4f4f4f;
  font-size:12px;
  font-weight:bold;
-margin:2px 0 4px  0;
+margin:2px 0 4px  60px;
+
 }
 #people_list a{
 
@@ -428,4 +431,9 @@ width:25px;
 }
 .social_n_imgcont{
 float:right;
+}
+#comp_name {
+color:#fff;
+font-size:26px;
+font-family:arial;
 }

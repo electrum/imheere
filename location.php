@@ -63,15 +63,13 @@ geo();
 <? endif; ?>
   </script>
   </head>
-  <body>
+    <body onload="setTimeout(function () {window.scrollTo(0,1);}, 0);">
     <div class="main-top">
       <div>
-        <img alt="Company Name" src="" />
+        <span id="comp_name">SweetGeo</span>
       </div>
-      <div class="header-left-fb">
-        <?=facebook_div()?>
-        <fb:login-button autologoutlink="true"></fb:login-button>
-      </div>
+<?=facebook_div()?>
+<fb:login-button autologoutlink="true"></fb:login-button>
       <div class="header-right"><a href="<?=$self?>">Refresh</a></div>
     </div>
     <div class="main-middle-search">
@@ -88,13 +86,13 @@ geo();
             name="q"
             value="<?=htmlspecialchars($searchtext)?>"
             type="text"/>
-        <input class="search_form_submit" value="Find" type="submit"/>
-      </form>
+          <input class="search_form_submit" value="Find" type="submit"/>
+       </form>
      </div>
       <? if (isset($spots)): ?>
       <div class="title-line">
-       <p>Locations Near You</p>
-     </div>
+        <p>Locations Near You</p>
+      </div>
       <div id='loc_container'>
       <? foreach ($spots as $id => $i): ?>
         <div class="loc">
@@ -109,6 +107,7 @@ geo();
           </a>
         </div>
       <? endforeach; ?>
+      </div>
       <? endif; ?>
       </div>
     </div>

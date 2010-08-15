@@ -30,11 +30,12 @@ function time_delta($t)
   <title>SweetGeo</title>
   <link rel="stylesheet" type="text/css" href="master.css" />
 </head>
-<body>
-
+<body onload="setTimeout(function () {window.scrollTo(0,1);}, 0);">
 <div>
   <div class="main-top">
-    <div>SweetGeo</div>
+    <div id="cmpname">
+       <span id="comp_name">SweetGeo</span>
+    </div>
   </div>
   <div class="header-left"><a href="status.php?location=<?=$location?>">Back</a></div>
   <div class="header-right"><a href="wall.php?location=<?=$location?>">Refresh</a></div>

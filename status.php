@@ -52,10 +52,12 @@ if (isset($_POST["text"])) {
     }
   </script>
 </head>
-<body>
+<body onload="setTimeout(function () {window.scrollTo(0,1);}, 0);" style="background: gray">
 <div>
   <div class="main-top">
-    <div>SweetGeo</div>
+  <div id="cmpname">
+    <span id="comp_name">SweetGeo</span>
+    </div>
   </div>
   <div class="header-left"><a href="location.php">Back</a></div>
   <div class="header-right"><a href="#" onclick="submit(); return false;">Post</a></div>

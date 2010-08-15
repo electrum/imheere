@@ -14,10 +14,10 @@ if (get_facebook_cookie()) {
   <title>SweetGeo</title>
   <link rel="stylesheet" type="text/css" href="master.css" />
   </head>
-  <body>
+  <body onload="setTimeout(function () {window.scrollTo(0,1);}, 1);">
   <div class="main-top">
     <div id="cmpname">
-        <img alt="Company Name" src="">
+       <span id="comp_name">SweetGeo</span>
     </div>
   </div>
   <div class="main-middle">
