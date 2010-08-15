@@ -77,4 +77,3 @@ function geocode($address)
     return $x;
 }
 
-?>

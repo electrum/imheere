@@ -61,4 +61,3 @@ function get_facebook_user_name($uid)
     return $x["name"];
 }
 
-?>
