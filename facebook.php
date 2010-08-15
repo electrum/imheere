@@ -49,4 +49,16 @@ function facebook_require_login()
     }
 }
 
+function get_facebook_user_name($uid)
+{
+    $url = "http://graph.facebook.com/$uid?fields=name";
+    $x = @file_get_contents($url);
+    if ($x === false)
+        die("failed calling facebook graph api for user: " . $uid);
+    $x = json_decode($x, true);
+    if (!isset($x["name"]))
+        die("facebook name not found for user: " . $uid);
+    return $x["name"];
+}
+
 ?>

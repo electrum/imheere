@@ -26,7 +26,8 @@ if (isset($_POST["text"])) {
     if (!isset($error)) {
         $cookie = get_facebook_cookie();
         $uid = $cookie["uid"];
-        insert_user_status_at_location($uid, $location, $text);
+        $name = get_facebook_user_name($uid);
+        insert_user_location($uid, $name, $location, $text);
         header("Location: wall.php?location=$location");
         exit;
     }
