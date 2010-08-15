@@ -1,24 +1,23 @@
 <?php
 
-define('MYSQL_HOST', 'localhost');
+define('MYSQL_HOST', '127.0.0.1');
 define('MYSQL_USER', 'root');
 define('MYSQL_PASS', '');
 define('MYSQL_DB', 'sweetgeo');
 
 try {
-  $dbh = @new PDO("mysql:host=" . MYSQL_HOST . ";dbname=" . MYSQL_DB,
-    MYSQL_HOST, MYSQL_PASS);
+  $dbh = @new PDO("mysql:host=" . MYSQL_HOST . ";dbname=" . MYSQL_DB, MYSQL_USER, MYSQL_PASS);
 }
 catch(PDOException $e) {
   die("failed connecting to database: " . $e->getMessage());
 }
 
-function insert_user_at_location($user_id,$location_id,$status)
+function insert_user_status_at_location($user_id, $location_id, $status)
 {
   global $dbh;
   try {
-    $stmt = $dbh->prepare('INSERT INTO user_at_location(user_id, location_id, status) VALUES (? , ?, ?)');
-    $res = $stmt->execute(array($user_id,$location_id,$status));
+    $stmt = $dbh->prepare('INSERT INTO user_at_location(user_id, location_id, status) VALUES (?, ?, ?)');
+    $res = $stmt->execute(array($user_id, $location_id, $status));
   }
   catch(PDOException $e) {
     die("database insert failed: " . $e->getMessage());
@@ -38,12 +37,12 @@ function select_users_at_location($location_id)
   }
 }
 
-function insert_user_comment($user_id,$from_id,$message)
+function insert_user_comment($user_id, $from_id, $message)
 {
   global $dbh;
   try {
-    $stmt = $dbh->prepare('INSERT INTO user_comment(user_id,from_id,message) VALUES (? , ?, ?)');
-    $stmt->execute(array($user_id,$from_id,$message));
+    $stmt = $dbh->prepare('INSERT INTO user_comment(user_id, from_id, message) VALUES (?, ?, ?)');
+    $stmt->execute(array($user_id, $from_id, $message));
   }
   catch(PDOException $e) {
     die("database insert failed: " . $e->getMessage());

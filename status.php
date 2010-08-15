@@ -1,4 +1,5 @@
 <? require_once("facebook.php"); ?>
+<? require_once("mysql.php"); ?>
 <? $self = $_SERVER["PHP_SELF"]; ?>
 <?
     $location = intval($_REQUEST["location"]);
