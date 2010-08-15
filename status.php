@@ -74,6 +74,6 @@ if (isset($_POST["text"])) {
   <p>Please limit to <?=$limit?> characters.</p>
 </div>
 <div id="or">or</div>
-<div id="auto_button"><a href="graffiti.php?location=<?=$location?>">Autograph</a></div>
+<a href="graffiti.php?location=<?=$location?>"><div id="auto_button">Autograph</div></a>
 </body>
 </html>
