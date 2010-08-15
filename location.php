@@ -81,23 +81,23 @@ geo();
             name="q"
             value="<?=htmlspecialchars($searchtext)?>"
             type="text"/>
-          <input class="search_form_submit" value="Find" type="submit"/>
-        </form>
-      </div>
+          <input class="search_form_submit" value="Find" type="submit"/>
+        </form>
+      </div>
       <? if (isset($spots)): ?>
       <div class="title-line">
-        <p>Locations Near You</p>
-      </div>
+        <p>Locations Near You</p>
+      </div>
       <div id='loc_container'>
       <? foreach ($spots as $id => $i): ?>
         <div class="loc">
           <a href="status.php?location=<?=$id?>">
           <div class="location_left_side">
-            <img src="<?=$i["image_url"]?>" />
-          </div>  
-          <div class="location_right_side">  
+            <img src="<?=$i["image_url"]?>" />
+          </div> 
+          <div class="location_right_side"> 
             <div class="location_title_side"><?=htmlspecialchars($i["name"])?></div>
-            <div class="location_distance_side"><?=round($i["distance"])?> meters</div>
+            <div class="location_distance_side"><?=round($i["distance"])?> meters</div>
           </div>
           </a>
         </div>
