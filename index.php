@@ -23,8 +23,9 @@ if (get_facebook_cookie()) {
   <div class="main-middle">
     <h1>Join Now, It's Free</h1>
     <div class="content">
-     <p>Ever wondered if the person next to you has the same interests as you?</p>
-     <p>Sign Up to find people at your location that meet your interests.</p>
+     <p>The person you see every morning at the coffee shop might just be the person you need to meet.</p>
+     <p>SweetGeo helps you discover who's around you and opens up communication</p>
+     <p>Geo check-in has never been so sweet.</p>
     </div>
     <br />
     <fb:login-button></fb:login-button>
