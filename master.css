@@ -93,6 +93,7 @@ input {color: #858585}
     -webkit-border-radius: 8px; 
     border-radius: 8px;
 }
+.clear-button a:hover, 
 .header-left a:hover, 
 .header-right a:hover {
     background: #828282;
