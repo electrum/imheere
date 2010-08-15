@@ -1,20 +1,21 @@
 <?
+function header() {
+?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:fb="http://www.facebook.com/2008/fbml">
+    <head>
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no" /> 
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <title>SweetGeo</title>
+        <link href="masterStyle.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+<?
+}
 function footer() {
 ?>
     </body>
 </html>
-<?
-}
-
-function header() {
-?>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-        <title>Untitled Document</title>
-        <link href="masterStyle.css" rel="stylesheet" type="text/css" />
-    </head>
-    <body>
 <?
 }
