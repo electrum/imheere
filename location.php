@@ -65,10 +65,10 @@ geo();
       <div class="header-right">
         <a href="#">Refresh</a>
       </div>
-    </div>
-    <div class="sign-up-fb">
-      <?=facebook_div()?>
-      <fb:login-button autologoutlink="true"></fb:login-button>
+      <div class="header-left-fb">
+        <?=facebook_div()?>
+        <fb:login-button autologoutlink="true"></fb:login-button>
+      </div>
     </div>
     <div class="header-right"><a href="<?=$self?>">Refresh</a></div>
     <div class="main-middle-search">
