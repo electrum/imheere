@@ -1,30 +1,36 @@
-<? require_once("facebook.php"); ?>
-<? require_once("mysql.php"); ?>
-<? $self = $_SERVER["PHP_SELF"]; ?>
 <?
-    $location = intval($_REQUEST["location"]);
-    if ($location <= 0) {
-        header("Location: location.php");
-        exit;
-    }
+require_once("facebook.php");
+require_once("mysql.php");
 
-    $limit = 140;
-    if (isset($_POST["text"])) {
-        $text = trim($_POST["text"]);
-        if (strlen($text) == 0) {
-            $error = "Status message was blank.";
-        }
-        else {
-            mb_internal_encoding("UTF-8");
-            if (mb_strlen($text) > $limit) {
-                $error = "Status message is too long.";
-            }
+facebook_require_login();
+$self = $_SERVER["PHP_SELF"];
+
+$location = intval($_REQUEST["location"]);
+if ($location <= 0) {
+    header("Location: location.php");
+    exit;
+}
+
+$limit = 140;
+if (isset($_POST["text"])) {
+    $text = trim($_POST["text"]);
+    if (strlen($text) == 0) {
+        $error = "Status message was blank.";
+    }
+    else {
+        mb_internal_encoding("UTF-8");
+        if (mb_strlen($text) > $limit) {
+            $error = "Status message is too long.";
         }
     }
     if (!isset($error)) {
-        die("insert location=$location, text=$text");
-        // redirect to list
+        $cookie = get_facebook_cookie();
+        $uid = $cookie["uid"];
+        insert_user_status_at_location($uid, $location, $text);
+        header("Location: wall.php?location=$location");
+        exit;
     }
+}
 ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
@@ -32,20 +38,23 @@
 <head>
   <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <title>Who is here?????</title>
+  <title>SweetGeo</title>
   <link rel="stylesheet" type="text/css" href="master.css" />
   <script>
     function $(id) { return document.getElementById(id); }
     function submit() {
-        if ($("text").value.length > 0) $("form").submit();
-        return false;
+      if ($("text").value.length == 0)
+        alert('Please enter a status');
+      else
+        $("form").submit();
+      return false;
     }
   </script>
 </head>
 <body>
 <div>
   <div class="main-top">
-    <div>Who is here?????</div>
+    <div>SweetGeo</div>
   </div>
   <div class="header-left"><a href="location.php">Back</a></div>
   <div class="header-right"><a href="#" onclick="submit(); return false;">Post</a></div>

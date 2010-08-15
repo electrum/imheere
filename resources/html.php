@@ -1,5 +1,5 @@
 <?
-function header() {
+function html_header() {
 ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
@@ -8,12 +8,12 @@ function header() {
         <meta name="viewport" content="initial-scale=1.0, user-scalable=no" /> 
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <title>SweetGeo</title>
-        <link href="masterStyle.css" rel="stylesheet" type="text/css" />
+        <link href="resources/masterStyle.css" rel="stylesheet" type="text/css" />
     </head>
     <body>
 <?
 }
-function footer() {
+function html_footer() {
 ?>
     </body>
 </html>
