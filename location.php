@@ -1,7 +1,10 @@
-<? require_once("facebook.php"); ?>
-<? require_once("gowalla.php"); ?>
-<? $self = $_SERVER["PHP_SELF"]; ?>
 <?
+require_once("facebook.php");
+require_once("gowalla.php");
+
+facebook_require_login();
+$self = $_SERVER["PHP_SELF"];
+
 $searchhelp = "Enter Location Name";
 $searchtext = $searchhelp;
 if (isset($_GET["latlng"])) {
@@ -32,7 +35,7 @@ else if (isset($_GET["q"])) {
 <head>
   <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <title>Who is here?????</title>
+  <title>SweetGeo</title>
   <link rel="stylesheet" type="text/css" href="master.css" />
   <script type="text/javascript">
 function geo() {
@@ -62,8 +65,10 @@ geo();
 </head>
 <body>
 <div class="main-top">
-  <div>Who is here?????</div>
+  <div>SweetGeo</div>
 </div>
+<?=facebook_div()?>
+<div class="fblogout-left"><fb:login-button autologoutlink="true"></fb:login-button></div>
 <div class="header-right"><a href="<?=$self?>">Refresh</a></div>
 <div class="main-middle-search">
   <div class="search_form">
