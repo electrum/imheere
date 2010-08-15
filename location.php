@@ -66,15 +66,14 @@ geo();
   <body>
     <div class="main-top">
       <div>
-        <img alt="Company Name" src="">
+        <img alt="Company Name" src="" />
       </div>
-      <div class="header-right"><a href="<?=$self?>">Refresh</a></div>
       <div class="header-left-fb">
         <?=facebook_div()?>
         <fb:login-button autologoutlink="true"></fb:login-button>
       </div>
+      <div class="header-right"><a href="<?=$self?>">Refresh</a></div>
     </div>
-    
     <div class="main-middle-search">
       <div class="search_form">
         <? if (isset($geoerror)): ?>

@@ -1,4 +1,11 @@
-
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:fb="http://www.facebook.com/2008/fbml">
+    <head>
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no" /> 
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <title>SweetGeo</title>
+        <link href="../masterStyle.css" rel="stylesheet" type="text/css" />
         <div>
     <div class="main-top">
     <div>
@@ -34,7 +41,8 @@
 
     <div class="mapbox_usertext">
       <div>
-        Engineer that wants out of Yahoo. Google please rescue me!
+        Engineer looking for a new job.
+        <!-- Engineer that wants out of Yahoo. Google please rescue me! -->
       </div>
     </div>
   </div>
