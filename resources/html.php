@@ -9,13 +9,5 @@ function html_header() {
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <title>SweetGeo</title>
         <link href="resources/masterStyle.css" rel="stylesheet" type="text/css" />
-    </head>
-    <body>
-<?
-}
-function html_footer() {
-?>
-    </body>
-</html>
 <?
 }
