@@ -45,7 +45,7 @@ if (isset($_POST["imgdata"])) {
 <div align="center">
 <canvas id="paint_area" style="align=center;border:1px solid black; margin: 20px 8px 10px 8px;"></canvas>
 <br />
-<button onclick="clear_up()">Clear Autograph</button>
+<div class="clear-button"><a href="#" onclick="clear_up(); return false;">Clear</a></div>
 </div>
 
     <script>
