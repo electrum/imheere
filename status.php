@@ -56,7 +56,7 @@ if (isset($_POST["text"])) {
 <div>
   <div class="main-top">
   <div id="cmpname">
-    <span id="comp_name">SweetGeo</span>
+    <div id="comp_name"><a href="location.php" title="sweetgeo"><img src="logo.png"></a></div>
     </div>
   </div>
   <div class="header-left"><a href="location.php">Places</a></div>
