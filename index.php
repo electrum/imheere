@@ -15,13 +15,12 @@ if (get_facebook_cookie()) {
   <link rel="stylesheet" type="text/css" href="master.css" />
 </head>
 <body>
-<div>
-  <div class="main-top">
-    <div>Who is here?????</div>
-  </div>
-  <div class="main-middle">
-    <h1>Join Now, It's Free</h1>
-    <div class="content">
+<div class="main-top">
+  <div>SweetGeo</div>
+</div>
+<div class="main-middle">
+  <h1>Join Now, It's Free</h1>
+  <div class="content">
     <p>Ever wondered if the person next to you has the same interests as you?</p><br />
     <p>Sign Up to find people at your location that meet your interests.</p>
   </div>
